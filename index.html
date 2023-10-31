@@ -1,65 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-        .login-container {
-            width: 300px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="shortcut icon" href="assets/img/reading.png" type="image/x-icon">
 
-        .login-container h2 {
-            text-align: center;
-        }
+        <title>TSB</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="login__content">
+                <img src="assets/img/bg-login.png" alt="login image" class="login__img">
 
-        .login-input {
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
-            font-size: 16px;
-        }
+                <form  class="login__form" id="login-form">
+                    <div>
+                        <h1 class="login__title">
+                            <span>Welcome</span> Back
+                        </h1>
+                        <p class="login__description">
+                            Welcome! Please login to continue.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <div class="login__inputs">
+                            <div>
+                                <label for="" class="login__label">Email</label>
 
-        .login-btn {
-            width: 100%;
-            padding: 10px;
-            font-size: 18px;
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+                                <input type="email"  placeholder="Enter your email address" required class="login__input" id="username" >
+                            </div>
+    
+                            <div>
+                                <label for="" class="login__label">Password</label>
+    
+                                <div class="login__box">
+                                    <input type="password" placeholder="Enter your password" required class="login__input" id="inputPass">
+                                    <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                                </div>
+                            </div>
+                        </div>
 
-        .login-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
+                        <div class="login__check">
+                            <input type="checkbox" class="login__check-input">
+                            <label for="" class="login__check-label">Remember me</label>
+                        </div>
+                    </div>
 
-<body>
-    <div class="login-container">
-        <h2>Login Form</h2>
-        <form action="submit" method="post">
-            <input type="text" class="login-input" placeholder="Username" name="username" required>
-            <input type="password" class="login-input" placeholder="Password" name="password" required>
-            <button type="submit" class="login-btn">Login</button>
-        </form>
-    </div>
-</body>
+                    <div>
+                        <div class="login__buttons">
+                            <button class="login__button" type="submit">Log In</button>
+                            <p id="message"></p>
+                            <!-- <button class="login__button login__button-ghost">Sign Up</button> -->
+                        </div>
 
+                        <a href="#" class="login__forgot">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
